@@ -1,9 +1,11 @@
-import { GlobalStyle } from './GlobalStyle';
+import TimerPanel from './components/TimerPanel';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <>
-      <GlobalStyle />
+      <TimerPanel></TimerPanel>
+      <Menu></Menu>
     </>
   );
 }
