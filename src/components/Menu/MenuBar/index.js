@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Item } from './style';
 import DrawerButton from '../DrawerButton';
 
-function MenuBar({ menuItems, handleMenuBtnClick, handleToggleMenuBtn, activeItem }) {
+function MenuBar({ menuItems, handleMenuBtnClick, activeItem }) {
   const renderMenuIcons = () =>
     menuItems.map((item) => {
       const IconComponent = item.icon;
@@ -13,7 +13,6 @@ function MenuBar({ menuItems, handleMenuBtnClick, handleToggleMenuBtn, activeIte
           isActive={isActive}
           onClick={() => {
             handleMenuBtnClick(item.title);
-            handleToggleMenuBtn(true);
           }}
         >
           <IconComponent></IconComponent>
@@ -24,7 +23,7 @@ function MenuBar({ menuItems, handleMenuBtnClick, handleToggleMenuBtn, activeIte
   return (
     <Container>
       {renderMenuIcons()}
-      <DrawerButton handleToggleMenuBtn={handleToggleMenuBtn}></DrawerButton>
+      <DrawerButton></DrawerButton>
     </Container>
   );
 }

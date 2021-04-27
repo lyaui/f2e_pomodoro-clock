@@ -9,11 +9,11 @@ export const Item = styled.div`
   ::before {
     content: '';
     position: absolute;
-    width: 10px;
+    width: 7px;
     height: 6px;
-    transform: rotate(125deg);
-    border-radius: 50%;
-    right: 0;
+    transform: rotate(130deg);
+    border-radius: 40%;
+    right: 1px;
     background-color: var(--secondary-500);
   }
 `;

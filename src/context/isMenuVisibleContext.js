@@ -4,10 +4,14 @@ const isMenuVisibleContext = createContext({ isMenuVisible: true, handleMenuVisi
 
 export const IsMenuVisibleProvider = ({ children }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(true);
-  const handleMenuVisible = () => {
-    setIsMenuVisible();
+
+  const contextValue = {
+    isMenuVisible,
+    handleMenuVisible() {
+      setIsMenuVisible((preIsMenuVisible) => !preIsMenuVisible);
+    },
   };
-  const contextValue = { isMenuVisible, handleMenuVisible };
+
   return (
     <isMenuVisibleContext.Provider value={contextValue}>{children}</isMenuVisibleContext.Provider>
   );

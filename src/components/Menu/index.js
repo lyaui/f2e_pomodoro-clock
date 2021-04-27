@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useIsMenuVisibleVal } from '../../context/isMenuVisibleContext';
 import { Container } from './style';
 import { MENU_ITEMS } from '../../constant';
 import * as Icon from '../Icons';
@@ -12,7 +13,7 @@ import StatisticReport from '../MenuPanels/StatisticReport';
 import ManageSounds from '../MenuPanels/ManageSounds';
 
 const Menu = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const { isMenuVisible } = useIsMenuVisibleVal();
   const [selectedPanel, setSelectedPanel] = useState(MENU_ITEMS.ADD_TASK);
 
   const menuItems = [
@@ -24,12 +25,6 @@ const Menu = () => {
 
   const handleMenuBtnClick = (title) => {
     setSelectedPanel(title);
-  };
-
-  const handleToggleMenuBtn = (isVisible) => {
-    isVisible === true
-      ? setIsMenuVisible(isVisible)
-      : setIsMenuVisible((preIsMenuVisible) => !preIsMenuVisible);
   };
 
   const renderPanelsComponents = () =>
@@ -45,7 +40,6 @@ const Menu = () => {
       <MenuBar
         menuItems={menuItems}
         activeItem={selectedPanel}
-        handleToggleMenuBtn={handleToggleMenuBtn}
         handleMenuBtnClick={handleMenuBtnClick}
       ></MenuBar>
       {isMenuVisible && (

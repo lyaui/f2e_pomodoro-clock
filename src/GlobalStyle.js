@@ -1,8 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
 export const GlobalStyle = createGlobalStyle`
+
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+  }
+
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  }
+
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  }
+
   html {
   /* color */
   --primary: #EA5548;
@@ -25,7 +51,11 @@ export const GlobalStyle = createGlobalStyle`
   --xxl:2.5rem; // 40px
 
   /* others */
+  --font-weight-light:300;
+  --font-weight-normal: 400;
+  --font-weight-bold:700;
   --transition: all 0.3s ease;
+  
   box-sizing: border-box;
   }
 
@@ -34,6 +64,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
+    font-family:'Lato';
+    font-weight:var(--font-weight-normal);
     font-size: var(--base);
     background-color:var(--light-gray-500);
   }
