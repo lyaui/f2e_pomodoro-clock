@@ -1,7 +1,11 @@
+import { Container } from './style';
 import React from 'react';
+import Welcome from './Welcome';
 
-const TimerPanel = () => {
-  return <div></div>;
-};
+const TimerPanel = () => (
+  <Container>
+    <Welcome></Welcome>
+  </Container>
+);
 
 export default TimerPanel;

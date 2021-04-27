@@ -5,6 +5,6 @@ export const Container = styled.div`
   max-width: ${(props) => (props.isMenuVisible ? '50%' : '80px')};
   height: 100vh;
   background-color: var(--dark-gray-500);
-  margin-left: auto;
+
   transition: var(--transition);
 `;

@@ -37,6 +37,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: var(--base);
     background-color:var(--light-gray-500);
   }
+
+  #root {
+    display:flex
+  }
   
   button {
     width: 100%;

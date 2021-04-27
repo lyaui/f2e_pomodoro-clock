@@ -47,7 +47,6 @@ const Menu = () => {
         activeItem={selectedPanel}
         handleToggleMenuBtn={handleToggleMenuBtn}
         handleMenuBtnClick={handleMenuBtnClick}
-        handleToggleMenuBtn={handleToggleMenuBtn}
       ></MenuBar>
       {isMenuVisible && (
         <MenuContainer title={selectedPanel}>{renderPanelsComponents()}</MenuContainer>
