@@ -8,7 +8,14 @@ function MenuBar({ menuItems, handleMenuBtnClick, handleToggleMenuBtn, activeIte
       const IconComponent = item.icon;
       const isActive = activeItem === item.title;
       return (
-        <Item key={item.title} isActive={isActive} onClick={() => handleMenuBtnClick(item.title)}>
+        <Item
+          key={item.title}
+          isActive={isActive}
+          onClick={() => {
+            handleMenuBtnClick(item.title);
+            handleToggleMenuBtn(true);
+          }}
+        >
           <IconComponent></IconComponent>
         </Item>
       );

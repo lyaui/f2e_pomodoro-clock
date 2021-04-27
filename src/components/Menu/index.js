@@ -26,8 +26,10 @@ const Menu = () => {
     setSelectedPanel(title);
   };
 
-  const handleToggleMenuBtn = () => {
-    setIsMenuVisible((preIsMenuVisible) => !preIsMenuVisible);
+  const handleToggleMenuBtn = (isVisible) => {
+    isVisible === true
+      ? setIsMenuVisible(isVisible)
+      : setIsMenuVisible((preIsMenuVisible) => !preIsMenuVisible);
   };
 
   const renderPanelsComponents = () =>
@@ -45,6 +47,7 @@ const Menu = () => {
         activeItem={selectedPanel}
         handleToggleMenuBtn={handleToggleMenuBtn}
         handleMenuBtnClick={handleMenuBtnClick}
+        handleToggleMenuBtn={handleToggleMenuBtn}
       ></MenuBar>
       {isMenuVisible && (
         <MenuContainer title={selectedPanel}>{renderPanelsComponents()}</MenuContainer>
