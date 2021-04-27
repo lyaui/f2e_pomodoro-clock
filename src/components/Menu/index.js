@@ -12,6 +12,7 @@ import StatisticReport from '../MenuPanels/StatisticReport';
 import ManageSounds from '../MenuPanels/ManageSounds';
 
 const Menu = () => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [selectedPanel, setSelectedPanel] = useState(MENU_ITEMS.ADD_TASK);
 
   const menuItems = [
@@ -25,6 +26,10 @@ const Menu = () => {
     setSelectedPanel(title);
   };
 
+  const handleToggleMenuBtn = () => {
+    setIsMenuVisible((preIsMenuVisible) => !preIsMenuVisible);
+  };
+
   const renderPanelsComponents = () =>
     menuItems.map((item) => {
       const Component = item.component;
@@ -34,13 +39,16 @@ const Menu = () => {
     });
 
   return (
-    <Container>
+    <Container isMenuVisible={isMenuVisible}>
       <MenuBar
         menuItems={menuItems}
         activeItem={selectedPanel}
+        handleToggleMenuBtn={handleToggleMenuBtn}
         handleMenuBtnClick={handleMenuBtnClick}
       ></MenuBar>
-      <MenuContainer title={selectedPanel}>{renderPanelsComponents()}</MenuContainer>
+      {isMenuVisible && (
+        <MenuContainer title={selectedPanel}>{renderPanelsComponents()}</MenuContainer>
+      )}
     </Container>
   );
 };

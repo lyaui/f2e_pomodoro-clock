@@ -1,10 +1,11 @@
 import React from 'react';
-import Tomato from '../../UI/Tomato';
+// import Tomato from '../../UI/Tomato';
 
 const AddTodo = () => {
   return (
     <div>
-      AddTodo <Tomato></Tomato>
+      AddTodo
+      {/* <Tomato></Tomato> */}
     </div>
   );
 };

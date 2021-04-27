@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Item } from './style';
+import DrawerButton from '../DrawerButton';
 
-function MenuBar({ menuItems, handleMenuBtnClick, activeItem }) {
+function MenuBar({ menuItems, handleMenuBtnClick, handleToggleMenuBtn, activeItem }) {
   const renderMenuIcons = () =>
     menuItems.map((item) => {
       const IconComponent = item.icon;
@@ -13,7 +14,12 @@ function MenuBar({ menuItems, handleMenuBtnClick, activeItem }) {
       );
     });
 
-  return <Container>{renderMenuIcons()}</Container>;
+  return (
+    <Container>
+      {renderMenuIcons()}
+      <DrawerButton handleToggleMenuBtn={handleToggleMenuBtn}></DrawerButton>
+    </Container>
+  );
 }
 
 export default MenuBar;

@@ -1,19 +1,20 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.nav`
+  position: relative;
   width: 80px;
 `;
 
 export const Item = styled.button`
   width: 100%;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  transition: all 0.5s;
+  background-color: var(--dark-gray-500);
+  transition: var(--transition);
+
   &:hover {
-    background-color: var(--dark-gray);
+    transform: translateY(-2px);
   }
-  path {
+
+  & path {
     fill: ${(props) => props.isActive && 'var(--primary)'};
   }
 `;

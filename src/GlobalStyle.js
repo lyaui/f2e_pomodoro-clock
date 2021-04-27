@@ -24,6 +24,8 @@ export const GlobalStyle = createGlobalStyle`
   --xl: 1.5rem; // 24px
   --xxl:2.5rem; // 40px
 
+  /* others */
+  --transition: all 0.3s ease;
   box-sizing: border-box;
   }
 
@@ -34,5 +36,14 @@ export const GlobalStyle = createGlobalStyle`
   body{
     font-size: var(--base);
     background-color:var(--light-gray-500);
+  }
+  
+  button {
+    width: 100%;
+    outline:none;
+    border:none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
   }
 `;
