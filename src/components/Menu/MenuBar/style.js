@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.nav`
   position: relative;
   width: 80px;
+  box-shadow: -3px 3px 12px -4px rgba(0, 0, 0, 0.2);
 `;
 
 export const Item = styled.button`

@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -11,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
   }
 
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -20,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
   src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
   }
 
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
